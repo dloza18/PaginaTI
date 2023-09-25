@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<br lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Protocolo HTTP</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        h1 {
+            color: blue;
+        }
+    </style>
+</head>
+<br>
+    <h1>Protocolo HTTP:</h1>
+
+
+    <h2> Estructura y Funcionamiento</h2>
+
+    <p>
+        HTTP (Protocolo de Transferencia de Hipertexto) es el protocolo fundamental utilizado en la World Wide Web para la comunicación entre 
+        clientes y servidores. A continuación, describiré la estructura y el funcionamiento básico del protocolo HTTP:
+    </p>
+    <p>Estructura de HTTP:</p>
+
+    1. Métodos HTTP:
+    <br> HTTP define varios métodos o verbos que indican la acción que se debe realizar en el recurso identificado por la URL. 
+    Algunos métodos comunes son: </br>
+    <p> *GET: Recupera datos del servidor.</p>
+    
+   <p> *POST: Envía datos al servidor, típicamente para procesarlos y actualizar el estado del servidor.
+   </p> 
+   <p> *PUT: Actualiza un recurso en el servidor con los datos proporcionados.</p>
+    <p> *DELETE: Elimina un recurso en el servidor.</p>
+    <br>2. URI (Identificador Uniforme de Recursos):</br>
+    Una URI es una cadena que identifica de manera única un recurso en la web. Pueden ser URLs (direcciones web) o URIs genéricas.
+   <p></p>
+    <br>3. Cabeceras (Headers):</br>
+    Las cabeceras son componentes clave de una solicitud o respuesta HTTP que contienen información adicional sobre la transacción. Pueden 
+    incluir datos como la codificación, tipo de contenido, cookies, etc.
+   <p></p>
+    <br>4. Cuerpo del Mensaje (Message Body):</br> 
+    El cuerpo del mensaje contiene los datos que se envían o reciben en una solicitud o respuesta HTTP. Puede contener texto, HTML, JSON, imágenes, etc.
+    <p>
+        El protocolo HTTP está apoyado sobre los servidores de conexión TCP/IP, donde el protocolo TCP es el encargado de mantener 
+        la comunicación y garantizar que el proceso de intercambio de datos se realice sin errores luego de que se haya establecido la conexión.
+        </p>
+            HTTP se basa en sencillas operaciones de solicitud/respuesta.
+            Un cliente establece una conexión con un servidor y envía un mensaje con los datos de la solicitud.
+            El servidor responde con un mensaje similar, que contiene el estado de la operación y su posible resultado.
+        </p>
+    
+    <h2>Métodos de Petición HTTP</h2>
+        <p>
+            HTTP define un conjunto de métodos de petición para indicar la acción que se desea realizar para un recurso 
+            determinado. Aunque estos también pueden ser sustantivos, estos métodos de solicitud a veces son llamados HTTP verbs. 
+            Cada uno de ellos implementan una semántica diferente, pero algunas características similares son compartidas por un grupo de ellos: 
+    
+     <br>ej. un request method puede ser safe, idempotent (en-US), o cacheable. </br>
+    </p>
+    <p>
+        -GET
+     <br>El método GET solicita una representación de un recurso específico. Las peticiones que usan el método GET sólo deben recuperar datos. <br>
+    </p>
+    <p>
+        -HEAD
+       <br> método HEAD pide una respuesta idéntica a la de una petición GET, pero sin el cuerpo de la respuesta. <br>
+    </p>
+    
+           <p>
+        -POST
+        <br> El método POST se utiliza para enviar una entidad a un recurso en específico, causando a menudo un cambio 
+         en el estado o efectos secundarios en el servidor. <br>
+    </p> 
+    <p>
+        -PUT
+    <br> El modo PUT reemplaza todas las representaciones actuales del recurso de destino con la 
+    carga útil de la petición. <br>
+    </p> 
+    <p>
+        -DELETE
+    <br> El método DELETE borra un recurso en específico. <br>
+    </p> 
+    <p>
+        -CONNECT
+    <br> El método CONNECT establece un túnel hacia el servidor identificado por el recurso. <br>
+    </p> 
+    <p>
+        -OPTIONES
+    <br> El método OPTIONS es utilizado para describir las opciones de comunicación para el recurso de destino. <br>
+    </p> 
+    <p>
+        -TRACE
+    <br> El método TRACE realiza una prueba de bucle de retorno de mensaje a lo largo de la ruta al recurso de destino <br>
+    </p> 
+    <p>
+        -PATCH
+    <br> El método PATCH es utilizado para aplicar modificaciones parciales a un recurso. <br>
+    </p> 
+    <h2>Código de Respuesta HTTP</h2>
+        Los códigos de respuesta HTTP son números de tres dígitos que indican el estado de una 
+        solicitud realizada por un cliente a un servidor web. Estos códigos son parte de la respuesta 
+        que el servidor envía al cliente después de recibir una solicitud HTTP. 
+        <br>Cada código de respuesta 
+        proporciona información sobre el resultado de la solicitud y permite que el cliente y el servidor se 
+        comuniquen de manera efectiva. Aquí están algunos de los códigos de respuesta HTTP más comunes:
+    </br>        
+    </p>
+   
+    <p>1xx - Respuestas informativas:</p>
+        *100: Continuar
+        <br>*101: Cambio de protocolo</br>
+        <br>2xx - Respuestas satisfactorias:</br>
+            *200: OK      
+        <br> *201: Creado</br>
+            *204: Sin contenido      
+        <p>3xx - Redirecciones:</p>
+        *301: Movido permanentemente
+        <br>*302: Encontrado</br>
+        *304: No modificado
+              
+
+        <p>4xx - Errores del cliente:</p>
+        400: Solicitud incorrecta
+        <br>401: No autorizado</br>
+        403: Prohibido
+        404: No encontrado   
+        <br>405: Método no permitido</br>
+        429: Demasiadas solicitudes      
+        <p></p>
+        
+        <p>5xx - Errores del servidor:</p>
+        500: Error interno del servidor
+        <br>502: Bad Gateway</br>
+        503: Servicio no disponible
+        <br>504: Tiempo de espera de la puerta de enlace agotado </br>
+      
+        <p>Estos códigos de respuesta permiten que el cliente y el 
+            servidor comuniquen el estado de la solicitud y realicen acciones apropiadas en consecuencia. 
+            Por ejemplo, un código 200 indica que la solicitud fue exitosa, mientras que un código 404 indica 
+            que el recurso solicitado no fue encontrado en el servidor. Dependiendo del código de respuesta recibido, 
+            el cliente puede tomar diferentes acciones para manejar la situación de manera adecuada.</p>
+</body>
+</html>
